@@ -17,24 +17,4 @@
 - **Legal pages**: Disclaimer, Terms of Use, Privacy Policy, Cookie Policy  
 - **Expandable architecture**: Designed for scaling into a full agency platform  
 
----
-
-## Tech Stack
-
-- **Frontend**:
-  - React (with React Router for SPA routing)  
-  - Tailwind CSS for styling  
-  - Swiper.js for sliders / project logos  
-  - Framer Motion (optional) for animations  
-
-- **Backend** (optional / expandable):
-  - Node.js + Express.js  
-  - MongoDB / PostgreSQL (database for forms or CMS)  
-  - Serverless API endpoints (Vercel Functions)  
-
-- **Deployment**:
-  - Vercel for frontend hosting  
-  - Optional backend on Vercel serverless or other cloud provider  
-
----
 
