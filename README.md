@@ -1,17 +1,40 @@
-# React + Vite
+# VextraWeb – Full-Stack Agency App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**VextraWeb** is a modern full-stack web application for a digital agency, providing **web development, e-commerce solutions, cloud & DevOps services, and more**. This app showcases agency projects, services, and company information in a **fast, scalable, and responsive interface**, ready for both web and mobile.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Hero section with **fast web & smart solutions tagline**  
+- **Services overview**: Web Development, E-commerce, Maintenance & Support, Cloud & DevOps  
+- **Project showcase**: Display logos and portfolio items  
+- **Company info**: About, Pricing, Contact Us  
+- **Responsive design**: Optimized for desktop, tablet, and mobile  
+- **Contact form**: Enables user inquiries  
+- **Legal pages**: Disclaimer, Terms of Use, Privacy Policy, Cookie Policy  
+- **Expandable architecture**: Designed for scaling into a full agency platform  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# vextraweb.com
+## Tech Stack
+
+- **Frontend**:
+  - React (with React Router for SPA routing)  
+  - Tailwind CSS for styling  
+  - Swiper.js for sliders / project logos  
+  - Framer Motion (optional) for animations  
+
+- **Backend** (optional / expandable):
+  - Node.js + Express.js  
+  - MongoDB / PostgreSQL (database for forms or CMS)  
+  - Serverless API endpoints (Vercel Functions)  
+
+- **Deployment**:
+  - Vercel for frontend hosting  
+  - Optional backend on Vercel serverless or other cloud provider  
+
+---
+
