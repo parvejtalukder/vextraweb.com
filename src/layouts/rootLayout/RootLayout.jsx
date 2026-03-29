@@ -12,7 +12,7 @@ const RootLayout = () => {
             <main className='py-5'>
                 <Outlet></Outlet>
             </main>
-            <footer className='pb-4'>
+            <footer>
                 <Footer></Footer>
             </footer>
         </div>
