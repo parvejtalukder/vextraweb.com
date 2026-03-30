@@ -75,7 +75,7 @@ const dataSlider = [
 const SliderBar = () => {
 
   return (
-<div className="bg-blue-500/80 hover:bg-blue-500/30 transition-all duration-1000 p-6 w-full rounded-2xl lg:mt-6 mt-10">
+<div className="border-2 border-transparent hover:border-blue-50/90 bg-blue-500/80 hover:bg-blue-500/30 transition-all duration-1000 p-6 w-full rounded-2xl lg:mt-6 mt-10">
       <div className='pb-5 flex flex-col justify-center items-center'>
         <h2 className='text-3xl sm:text-4xl font-bold lg:text-4xl -mb-2'>Our Projects</h2>
         <p className="text-white/60 lg:text-white/70 mt-2">
