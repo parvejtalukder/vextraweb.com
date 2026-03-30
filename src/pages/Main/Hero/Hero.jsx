@@ -13,7 +13,7 @@ const Hero = () => {
             </h2>
 
             {/* Hero Description + Button */}
-            <section className='flex flex-col pb-5 lg:flex-row justify-between items-start lg:items-end gap-4'>
+            <section className='flex flex-col pb-5 lg:flex-row justify-between items-start lg:items-end gap-7'>
                 <p className='text-lg sm:text-xl lg:text-2xl flex-5/8 leading-relaxed'>
                     Crafting fast, scalable, and reliable web solutions, from media sites <br className='hidden lg:block' /> and eCommerce stores to custom web applications.
                 </p>

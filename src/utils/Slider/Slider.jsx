@@ -76,7 +76,12 @@ const SliderBar = () => {
 
   return (
 <div className="bg-blue-500/80 p-6 w-full rounded-2xl lg:mt-6 mt-10">
-      <h2 className='text-4xl sm:text-4xl font-bold lg:text-5xl pb-5 leading-tight'>Our Projects</h2>
+      <div className='pb-5 flex flex-col justify-center items-center'>
+        <h2 className='text-3xl sm:text-4xl font-bold lg:text-4xl -mb-2'>Our Projects</h2>
+        <p className="text-white/60 lg:text-white/70 mt-2">
+          We use modern, scalable technologies to build fast, reliable, and future-ready web applications.
+        </p>
+      </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-items-center">
         {dataSlider.map((brand) => (
           <a

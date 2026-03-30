@@ -5,7 +5,7 @@ import Header from '../../components/Header/Header';
 
 const RootLayout = () => {
     return (
-        <div className='max-w-6xl mx-auto'>
+        <div className='max-w-6xl mx-auto text-white'>
             <header className='lg:pt-1 sticky top-0 z-50'>
                 <Header></Header>
             </header>
