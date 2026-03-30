@@ -33,7 +33,7 @@ const Header = () => {
 
 
     return (
-            <div className={`navbar bg-base-100 shadow-sm lg:rounded-[50px] lg:px-5 lg:top-2 ${scroll ? "bg-base-100/95 backdrop-blur-md" : "bg-base-100/95"}`}>
+            <div className={`navbar bg-[#1C2128] shadow-sm lg:rounded-[50px] lg:px-5 lg:top-2 ${scroll ? "bg-[#1C2128]/95 backdrop-blur-md" : "bg-[#1C2128]/95"}`}>
               <div className="navbar-start">
                 <div className="dropdown">
                   <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
