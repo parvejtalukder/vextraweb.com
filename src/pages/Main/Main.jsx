@@ -8,7 +8,7 @@ const Main = () => {
         <div className='lg:py-10 py-5'>
             <Hero></Hero>
             <div className='lg:pt-10 lg:mt-0 mt-16 pb-5 opacity-25 text-[#3381e7]'><hr /></div>
-            <Stack></Stack>
+            <div className='-mt-4'><Stack></Stack></div>
             <SliderBar></SliderBar> 
         </div>
     );

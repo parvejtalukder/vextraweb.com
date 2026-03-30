@@ -40,7 +40,7 @@ const secondRow = stackList.slice(stackList.length / 2)
 
 const LogoCard = ({ logo, alt }) => {
   return (
-    <div className="flex items-center justify-center w-28 h-20 mx-4 rounded-xl bg-neutral-900 hover:bg-[#004AAD] transition">
+    <div className="flex items-center justify-center w-28 h-20 mx-4 rounded-xl duration-1000 bg-neutral-900 hover:bg-[#004AAD] transition-all">
       <img src={logo} alt={alt} className="h-10 object-contain" />
     </div>
   )
@@ -51,8 +51,8 @@ const Stack = () => {
     <section className="py-20 bg-black text-white">
       {/* Title */}
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-semibold hover:text-[#004AAD]">Technologies We Use</h2>
-        <p className="text-white/60 mt-2">
+        <h2 className="text-3xl font-semibold transition-all duration-1000 hover:text-[#004AAD]">Technologies We Use</h2>
+        <p className="text-white/60 mt-2 px-3">
           We use modern, scalable technologies to build fast, reliable, and future-ready web applications.
         </p>
       </div>

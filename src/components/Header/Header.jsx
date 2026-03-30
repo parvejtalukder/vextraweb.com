@@ -25,10 +25,10 @@ const Header = () => {
 
     const links = 
         <>
-          <NavLink to="/" className={({ isActive }) => isActive ? "text-[#004AAD] font-bold transition-all" : "hover:text-[#004AAD] transition-all"}>Home</NavLink>
-          <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#004AAD] font-bold transition-all" : "hover:text-[#004AAD] transition-all"}>Services</NavLink>
-          <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#004AAD] font-bold transition-all" : "hover:text-[#004AAD] transition-all"}>About</NavLink>
-          <NavLink to="/pricing" className={({ isActive }) => isActive ? "text-[#004AAD] font-bold transition-all" : "hover:text-[#004AAD] transition-all"}>Pricing</NavLink>
+          <NavLink to="/" className={({ isActive }) => isActive ? "text-[#004AAD] font-bold transition-all" : "hover:text-[#004AAD] duration-1000 transition-all"}>Home</NavLink>
+          <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#004AAD] font-bold transition-all" : "hover:text-[#004AAD] duration-1000 transition-all"}>Services</NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#004AAD] font-bold transition-all" : "hover:text-[#004AAD] duration-1000 transition-all"}>About</NavLink>
+          <NavLink to="/pricing" className={({ isActive }) => isActive ? "text-[#004AAD] font-bold transition-all" : "hover:text-[#004AAD] duration-1000 transition-all"}>Pricing</NavLink>
         </>;
 
 
