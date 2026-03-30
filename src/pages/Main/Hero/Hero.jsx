@@ -8,9 +8,9 @@ const Hero = () => {
     return (
         <div className='flex flex-col lg:gap-4 pt-20 px-4'>
             {/* Hero Title */}
-            <h2 className='text-4xl sm:text-5xl lg:text-8xl font-medium pb-5'>
+            <h1 className='text-4xl sm:text-5xl lg:text-8xl font-medium pb-5'>
                 Fast <span className='text-[#3381e7]'>Web <br className="lg:block" /> & Smart</span> Solutions <span className='text-[#3381e7]'>✦</span>
-            </h2>
+            </h1>
 
             {/* Hero Description + Button */}
             <section className='flex flex-col pb-5 lg:flex-row justify-between items-start lg:items-end gap-7'>
