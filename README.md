@@ -4,8 +4,6 @@
 
 ---
 
----
-
 ## Features
 
 - Hero section with **fast web & smart solutions tagline**  
@@ -16,5 +14,3 @@
 - **Contact form**: Enables user inquiries  
 - **Legal pages**: Disclaimer, Terms of Use, Privacy Policy, Cookie Policy  
 - **Expandable architecture**: Designed for scaling into a full agency platform  
-
-
