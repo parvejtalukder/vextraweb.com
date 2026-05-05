@@ -8,8 +8,8 @@ const reviews = [
   { name: "John", username: "@john", body: "Fantastic results!", img: "https://avatar.vercel.sh/john" },
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+// const firstRow = reviews.slice(0, reviews.length / 2);
+// const secondRow = reviews.slice(reviews.length / 2);
 
 const ReviewCard = ({ img, name, username, body }) => (
   <figure className="flex flex-col items-center justify-center w-64 p-4 mx-4 bg-neutral-900 rounded-xl hover:bg-[#004AAD] transition-all">
