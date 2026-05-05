@@ -3,7 +3,7 @@ import React from 'react';
 
 const ServiceCard = ({ service }) => {
   return (
-    <div className="card bg-base-100 hover:bg-blue-400/40 rounded-2xl border-[1px] hover:border-blue-600 transition-all shadow-md hover:shadow-xl duration-700">
+    <div className="card bg-transparent hover:bg-blue-400/40 rounded-2xl border-[1px] hover:border-blue-600 transition-all shadow-md hover:shadow-xl duration-700">
       <div className="card-body">
         <h2 className="text-xl font-bold">{service.title}</h2>
         <p className="text-sm text-gray-500">{service.description}</p>
