@@ -18,8 +18,8 @@ const Hero = () => {
                     Crafting fast, scalable, and reliable web solutions, from media sites <br className='hidden lg:block' /> and eCommerce stores to custom web applications.
                 </p>
 
-                <Link to={"/pricing"} className='flex-1'>
-                    <TwoButton className="w-full sm:w-auto h-auto" text={"Get In Touch"} />
+                <Link to={"/free-consultation"} className='flex-1'>
+                    <TwoButton className="w-full sm:w-auto h-auto" text={"Free Consultation"} />
                 </Link>
             </section>
             {/* <hr className='lg:pt-6' /> */}
