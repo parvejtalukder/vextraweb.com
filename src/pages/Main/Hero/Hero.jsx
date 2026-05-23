@@ -9,7 +9,7 @@ const Hero = () => {
         <div className='flex flex-col lg:gap-4 pt-20 px-4'>
             {/* Hero Title */}
             <h1 className='text-4xl sm:text-5xl lg:text-8xl font-medium pb-5'>
-                Fast <span className='text-[#3381e7]'>Web <br className="lg:block" /> & Smart</span> Solutions <span className='text-[#3381e7]'>✦</span>
+                Fast <span className='text-[#3381e7]'>Web <br className="lg:block" /> & Smart</span> Solutions <span className='text-[#3381e7] animate-pulse'>✦</span>
             </h1>
 
             {/* Hero Description + Button */}

@@ -4,6 +4,7 @@ import SliderBar from '../../utils/Slider/Slider';
 import Stack from '../../components/Stack/Stack';
 import Services from './Services/Services';
 import Review from './Review/Review';
+import ButtonCTA from '@/components/ButtonCTA';
 
 const Main = () => {
     return (
@@ -14,6 +15,7 @@ const Main = () => {
             <div className='-mt-4'><Stack></Stack></div>
             <SliderBar></SliderBar> 
             <div className='mt-4'><Review></Review></div>
+            {/* <ButtonCTA></ButtonCTA> */}
         </div>
     );
 };
