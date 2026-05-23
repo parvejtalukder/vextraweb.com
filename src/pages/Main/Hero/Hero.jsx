@@ -19,7 +19,7 @@ const Hero = () => {
                 </p>
 
                 <Link to={"/free-consultation"} className='flex-1'>
-                    <TwoButton className="w-full sm:w-auto h-auto" text={"Free Consultation"} />
+                    <TwoButton className="w-full sm:w-auto h-auto" text={"Free Consult"} />
                 </Link>
             </section>
             {/* <hr className='lg:pt-6' /> */}
