@@ -41,7 +41,7 @@ const Services = () => {
           }}
           pagination={{ clickable: true }}
           modules={[Pagination, Autoplay]}
-          className="h-[500px] pb-12!"
+          className="h-100 pb-12!"
         >
           {services.map((service, index) => (
             <SwiperSlide key={index} className="h-full">
