@@ -40,32 +40,32 @@ const Footer = () => {
                 </div>
 
                 {/* Services */}
-                <nav>
-                    <h6 className="footer-title text-[#3391e7] text-lg font-semibold">Services</h6>
-                    <Link className="link link-hover" to="/services">Web Application Development</Link>
-                    <Link className="link link-hover" to="/services">E-commerce Solutions</Link>
-                    <Link className="link link-hover" to="/services">Content & Media Platforms</Link>
-                    <Link className="link link-hover" to="/services">UI/UX & Digital Strategy</Link>
-                </nav>
+                <ul>
+                    <li><h6 className="footer-title text-[#3391e7] text-lg font-semibold">Services</h6></li>
+                    <li><Link className="link link-hover" to="/services">Web Application Development</Link></li>
+                    <li><Link className="link link-hover" to="/services">E-commerce Solutions</Link></li>
+                    <li><Link className="link link-hover" to="/services">Content & Media Platforms</Link></li>
+                    <li><Link className="link link-hover" to="/services">UI/UX & Digital Strategy</Link></li>
+                </ul>
 
                 {/* Company */}
-                <nav>
-                    <h6 className="footer-title text-[#3391e7] text-lg font-semibold">Company</h6>
-                    <Link className="link link-hover" to="/services">Services</Link>
-                    <Link className="link link-hover" to="/about">About us</Link>
-                    <Link className="link link-hover" to="/pricing">Pricing</Link>
-                    <Link className="link link-hover" to="/contact">Contact us</Link>
-                    <Link className="link link-hover" to="/free-consultation">Free Consultation</Link>
-                </nav>
+                <ul>
+                    <li><h6 className="footer-title text-[#3391e7] text-lg font-semibold">Company</h6></li>
+                    <li><Link className="link link-hover" to="/services">Services</Link></li>
+                    <li><Link className="link link-hover" to="/about">About us</Link></li>
+                    <li><Link className="link link-hover" to="/pricing">Pricing</Link></li>
+                    <li><Link className="link link-hover" to="/contact">Contact us</Link></li>
+                    <li><Link className="link link-hover" to="/free-consultation">Free Consultation</Link></li>
+                </ul>
 
                 {/* Legal */}
-                <nav>
-                    <h6 className="footer-title text-[#3391e7] text-lg font-semibold">Legal</h6>
-                    <Link className="link link-hover" to="/disclaimer">Disclaimer</Link>
-                    <Link className="link link-hover" to="/terms-of-use">Terms of use</Link>
-                    <Link className="link link-hover" to="/privacy-policy">Privacy policy</Link>
-                    <Link className="link link-hover" to="/cookie-policy">Cookie policy</Link>
-                </nav>
+                <ul>
+                    <li><h6 className="footer-title text-[#3391e7] text-lg font-semibold">Legal</h6></li>
+                    <li><Link className="link link-hover" to="/disclaimer">Disclaimer</Link></li>
+                    <li><Link className="link link-hover" to="/terms-of-use">Terms of use</Link></li>
+                    <li><Link className="link link-hover" to="/privacy-policy">Privacy policy</Link></li>
+                    <li><Link className="link link-hover" to="/cookie-policy">Cookie policy</Link></li>
+                </ul>
             </section>
             <section className="border-t border-white/10 py-6 px-6 flex flex-col items-center gap-1 text-center">
                 <p className="text-sm text-white/60">
