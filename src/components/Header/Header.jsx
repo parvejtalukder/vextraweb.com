@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import Logo from '../Logo/Logo';
-import OneButton from '../../utils/Button/OneButton';
+import TwoButton from '../../utils/Button/TwoButton';
 
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
     useEffect(() => {
         
         const handleScroll = () => {
-            if(window.screenY > 50) {
+            if(window.scrollY > 50) {
                 setScroll(true);
             } else {
                 setScroll(false);
@@ -23,17 +23,19 @@ const Header = () => {
 
     },[])
 
+    const linkClass = ({ isActive }) => isActive ? "text-[#3391e7] font-bold" : "hover:text-[#3391e7] duration-300 transition-colors";
+
     const links = 
         <>
-          <NavLink to="/" className={({ isActive }) => isActive ? "text-[#004AAD] font-bold transition-all" : "hover:text-[#004AAD] duration-1000 transition-all"}>Home</NavLink>
-          <NavLink to="/services" className={({ isActive }) => isActive ? "text-[#004AAD] font-bold transition-all" : "hover:text-[#004AAD] duration-1000 transition-all"}>Services</NavLink>
-          <NavLink to="/about" className={({ isActive }) => isActive ? "text-[#004AAD] font-bold transition-all" : "hover:text-[#004AAD] duration-1000 transition-all"}>About</NavLink>
-          <NavLink to="/pricing" className={({ isActive }) => isActive ? "text-[#004AAD] font-bold transition-all" : "hover:text-[#004AAD] duration-1000 transition-all"}>Pricing</NavLink>
+          <NavLink to="/" end className={linkClass}>Home</NavLink>
+          <NavLink to="/services" className={linkClass}>Services</NavLink>
+          <NavLink to="/about" className={linkClass}>About</NavLink>
+          <NavLink to="/pricing" className={linkClass}>Pricing</NavLink>
         </>;
 
 
     return (
-            <div className={`navbar bg-[#1C2128] shadow-sm lg:rounded-[50px] lg:px-5 lg:top-2 ${scroll ? "bg-[#1C2128]/95 backdrop-blur-md" : "bg-[#1C2128]/95"}`}>
+            <div className={`navbar bg-surface shadow-sm lg:rounded-[50px] backdrop-blur-xl lg:px-5 lg:top-2 border border-white/5 ${scroll ? "shadow-[0_8px_30px_-12px_rgba(51,145,231,0.4)]" : ""}`}>
               <div className="navbar-start">
                 <div className="dropdown">
                   <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,10 +43,13 @@ const Header = () => {
                   </div>
                   <ul
                     tabIndex="-1"
-                    className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    className="menu menu-sm dropdown-content bg-surface rounded-box z-1 mt-3 w-52 p-2 shadow">
                     {
                         links
                     }
+                    <li>
+                      <NavLink to="/contact" className="hover:text-[#3391e7] transition-colors">Contact</NavLink>
+                    </li>
                   </ul>
                 </div>
                 <NavLink to={"/"}><Logo></Logo></NavLink>
@@ -55,7 +60,9 @@ const Header = () => {
                 </ul>
               </div>
               <div className="navbar-end">
-                <OneButton text={"Contact Us"}></OneButton>
+                <Link to={"/contact"}>
+                  <TwoButton text={"Hire Us"}></TwoButton>
+                </Link>
               </div>
             </div>
     );

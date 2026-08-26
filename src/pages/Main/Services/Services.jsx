@@ -1,85 +1,53 @@
 import ServiceCard from "@/components/ServiceCard/ServiceCard";
+import Reveal from "@/components/Reveal/Reveal";
+import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { Autoplay, FreeMode, Pagination } from "swiper/modules";
-
-const services = [
-  {
-    title: "Full-Stack Web Applications",
-    description: "Custom web applications built to solve real business problems.",
-    features: [
-      "Custom Dashboard & Admin Panel",
-      "API Development & Integration",
-      "Secure & Scalable Architecture",
-    ],
-  },
-  {
-    title: "E-commerce Development",
-    description: "High-converting online stores for your business growth.",
-    features: [
-      "Payment Gateway Integration",
-      "Product & Inventory Management",
-      "Order & Customer Management",
-    ],
-  },
-  {
-    title: "WordPress & News Portals",
-    description: "Dynamic websites for blogs, news portals, and content platforms.",
-    features: [
-      "Well WordPress Theme",
-      "News/Magazine Website",
-      "SEO & Speed Optimization",
-    ],
-  },
-  {
-    title: "Business & Organization Websites",
-    description: "Professional websites for companies, NGOs, and institutions.",
-    features: [
-      "Modern Responsive Design",
-      "Service & Portfolio Pages",
-      "Contact & Lead Generation Forms",
-    ],
-  },
-];
+import { Autoplay, Pagination } from "swiper/modules";
+import { services } from "@/lib/services";
 
 const Services = () => {
   return (
-    <section className="pt-20 pb-10 bg-black text-white">
-      <div className="text-center mb-10">
-        <h2 className="text-3xl font-semibold transition-all duration-1000 hover:text-[#004AAD]">
-          Our Services
-        </h2>
-        <p className="text-white/60 mt-2 px-3">
-          At VextraWeb, We build high-impact websites and digital strategies that
-          drive growth.
-        </p>
-      </div>
+    <section className="relative py-12 text-white">
+      <Reveal>
+        <SectionHeading
+          eyebrow="Our Services"
+          title="Custom web application development"
+          description="From full-stack web apps to e-commerce stores and content platforms, VextraWeb engineers solutions that are fast, scalable and built to grow."
+        />
+      </Reveal>
 
-      <div className="flex flex-col gap-6 lg:hidden px-4">
-        {services.slice(0, 4).map((service, index) => (
-          <ServiceCard key={index} service={service} />
+      {/* Mobile: stacked equal-height cards */}
+      <div className="flex flex-col gap-5 px-4 lg:hidden">
+        {services.map((service, index) => (
+          <Reveal key={index} delay={index * 0.06}>
+            <ServiceCard service={service} />
+          </Reveal>
         ))}
       </div>
 
-      <div className="hidden lg:block">
+      {/* Desktop: equal-height auto-playing carousel */}
+      <div className="hidden px-2 lg:block">
         <Swiper
           slidesPerView={3}
-          spaceBetween={20}
-          freeMode={true}
-          loop={true}
+          spaceBetween={24}
+          loop
           autoplay={{
-            delay: 2000,
+            delay: 2600,
             disableOnInteraction: true,
+            pauseOnMouseEnter: true,
           }}
           pagination={{ clickable: true }}
-          modules={[FreeMode, Pagination, Autoplay]}
+          modules={[Pagination, Autoplay]}
+          className="h-[500px] pb-12!"
         >
           {services.map((service, index) => (
-            <SwiperSlide key={index}>
-              <ServiceCard service={service} />
+            <SwiperSlide key={index} className="h-full">
+              <div className="flex h-full">
+                <ServiceCard service={service} />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

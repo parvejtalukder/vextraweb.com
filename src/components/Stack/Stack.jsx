@@ -40,40 +40,39 @@ const secondRow = stackList.slice(stackList.length / 2)
 
 const LogoCard = ({ logo, alt }) => {
   return (
-    <div className="flex items-center justify-center w-28 h-20 mx-4 rounded-xl duration-1000 bg-neutral-900 hover:bg-[#004AAD] transition-all">
-      <img src={logo} alt={alt} className="h-10 object-contain" />
+    <div className="group flex items-center justify-center w-28 h-16 mx-3 rounded-lg border border-white/10 transition-colors duration-300 hover:border-[#3391e7]/60">
+      <img src={logo} alt={alt} className="h-9 object-contain transition-opacity duration-300 group-hover:opacity-80" />
     </div>
   )
 }
 
 const Stack = () => {
   return (
-    <section className="py-20 bg-black text-white">
+    <section className="relative py-12 text-white">
       {/* Title */}
-      <div className="text-center mb-10">
-        <h2 className="text-3xl font-semibold transition-all duration-1000 hover:text-[#004AAD]">Technologies We Use</h2>
-        <p className="text-white/60 mt-2 px-3">
-          We use modern, scalable technologies to build fast, reliable, and future-ready web applications.
+      <div className="text-center mb-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#3391e7]">
+          Our Stack
+        </p>
+        <h2 className="text-2xl font-semibold mt-2">Technologies We Use</h2>
+        <p className="text-white/60 mt-2">
+          We build with modern, scalable technologies for fast, reliable and future-ready web apps.
         </p>
       </div>
 
       {/* Marquee */}
-      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden mx-auto max-w-5xl">
         <Marquee pauseOnHover className="[--duration:25s]">
           {firstRow.map((item) => (
             <LogoCard key={item.id} {...item} />
           ))}
         </Marquee>
 
-        <Marquee reverse pauseOnHover className="[--duration:25s] mt-6">
+        <Marquee reverse pauseOnHover className="[--duration:25s] mt-5">
           {secondRow.map((item) => (
             <LogoCard key={item.id} {...item} />
           ))}
         </Marquee>
-
-        {/* fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-black"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-black"></div>
       </div>
     </section>
   )

@@ -1,18 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Error = () => {
     return (
-        <div>
-<div class="min-h-screen flex flex-col justify-center items-center bg-gray-100 text-gray-800 px-5 text-center">
-  <h1 class="text-6xl font-bold mb-4">404</h1>
-  <h2 class="text-3xl font-semibold mb-2">Oops! Page Not Found</h2>
-  <p class="mb-6">The page you’re looking for doesn’t exist or has been moved.</p>
-  <div class="flex gap-4">
-    <a href="/" class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Go Home</a>
-    <a href="/contact" class="px-6 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition">Contact Us</a>
-  </div>
-  <p class="mt-6 text-sm text-gray-500">Looks like you took a wrong turn in the internet jungle!</p>
-</div>
+        <div className="min-h-screen flex flex-col justify-center items-center bg-midnight text-white px-5 text-center">
+            <h1 className="text-7xl font-bold text-[#3391e7]">404</h1>
+            <h2 className="text-3xl font-semibold mt-4">Oops! Page Not Found</h2>
+            <p className="mt-2 mb-6 text-white/60">
+                The page you're looking for doesn't exist or has been moved.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+                <Link to="/" className="px-6 py-2 bg-[#3391e7] text-white rounded-full hover:opacity-80 transition">
+                    Go Home
+                </Link>
+                <Link to="/contact" className="px-6 py-2 bg-white/10 text-white rounded-full hover:bg-white/20 transition">
+                    Contact Us
+                </Link>
+                <Link to="/free-consultation" className="px-6 py-2 bg-white/10 text-white rounded-full hover:bg-white/20 transition">
+                    Free Consultation
+                </Link>
+            </div>
+            <p className="mt-8 text-sm text-white/40">
+                Looks like you took a wrong turn in the internet jungle!
+            </p>
         </div>
     );
 };

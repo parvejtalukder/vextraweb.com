@@ -1,30 +1,81 @@
-import React from 'react';
-import { Link } from 'react-router';
-import TwoButton from '../../../utils/Button/TwoButton';
-// import Slider from '../../../utils/Slider/Slider';
-import SliderBar from '../../../utils/Slider/Slider';
+import React from "react";
+import { Link } from "react-router";
+import { motion as Motion } from "motion/react";
+import TwoButton from "../../../utils/Button/TwoButton";
+
+const words = [
+  { text: "Custom", accent: true },
+  { text: "Web", accent: true },
+  { text: "Application", accent: false },
+  { text: "Development", accent: false },
+];
 
 const Hero = () => {
-    return (
-        <div className='flex flex-col lg:gap-4 pt-20 px-4'>
-            {/* Hero Title */}
-            <h1 className='text-4xl sm:text-5xl lg:text-8xl font-medium pb-5'>
-                Fast <span className='text-[#3381e7]'>Web <br className="lg:block" /> & Smart</span> Solutions <span className='text-[#3381e7] animate-pulse'>✦</span>
-            </h1>
+  return (
+    <section className="relative flex flex-col gap-6 px-4 pb-20 pt-60 lg:gap-8 lg:pt-60">
+      <div className="max-w-5xl">
+        {/* Headline with staggered word entrance */}
+        <Motion.h1
+          className="pb-4 font-medium leading-[1.05] text-2xl sm:text-4xl lg:text-6xl"
+          initial="hidden"
+          animate="show"
+          variants={{
+            show: { transition: { staggerChildren: 0.12, delayChildren: 0.15 } },
+          }}
+        >
+          {words.map((word) => (
+            <span key={word.text}>
+              <Motion.span
+                className={`inline-block whitespace-pre ${
+                  word.accent ? "text-gradient-brand" : ""
+                }`}
+                variants={{
+                  hidden: { opacity: 0, y: 24, filter: "blur(6px)" },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    filter: "blur(0px)",
+                    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+                  },
+                }}
+              >
+                {word.text}
+              </Motion.span>
+              {"\u00A0"}
+            </span>
+          ))}
+        </Motion.h1>
 
-            {/* Hero Description + Button */}
-            <section className='flex flex-col pb-5 lg:flex-row justify-between items-start lg:items-end gap-7'>
-                <p className='text-lg sm:text-xl lg:text-2xl flex-5/8 leading-relaxed'>
-                    Crafting fast, scalable, and reliable web solutions, from media sites <br className='hidden lg:block' /> and eCommerce stores to custom web applications.
-                </p>
-
-                <Link to={"/free-consultation"} className='flex-1'>
-                    <TwoButton className="w-full sm:w-auto h-auto" text={"Free Consult"} />
-                </Link>
-            </section>
-            {/* <hr className='lg:pt-6' /> */}
-        </div>
-    );
+        {/* Subheading + actions */}
+        <Motion.div
+          className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <p className="max-w-xl text-lg leading-relaxed text-white/70 sm:text-xl">
+            VextraWeb builds fast, scalable and reliable custom web
+            applications, websites and e-commerce stores — engineered to help
+            your business grow online.
+          </p>
+          <div className="flex flex-wrap items-center gap-4">
+            <Link to={"/free-consultation"}>
+              <TwoButton className="w-full sm:w-auto" text={"Start Your Project"} />
+            </Link>
+            <Link
+              to={"/services"}
+              className="group inline-flex h-[46px] items-center gap-2 rounded-full border border-white/20 bg-transparent px-6 text-sm font-semibold text-white transition-all duration-300 hover:border-[#3391e7]/60 hover:bg-white/5"
+            >
+              Explore Services
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </Link>
+          </div>
+        </Motion.div>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;
